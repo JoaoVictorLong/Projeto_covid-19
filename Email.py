@@ -1,9 +1,18 @@
 import smtplib
 
 #def email(mail):
+my_email = "email"
+recevi_email = "email"
 
-smtpserver = smtplib.SMTP('smtp.outlook.com', 587)
-smtpserver.ehlo()
-smtpserver.starttls()
+server = smtplib.SMTP('localhost','1025')
 
-msg = ''
+mensage = """Subject: Covid-19 \
+From: voce
+
+
+testando %s
+"""%(joao)
+
+
+
+server.sendmail(my_email, recevi_email, mensage)
